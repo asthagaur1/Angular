@@ -37,7 +37,10 @@ export class LoginComponent implements OnInit {
     }
 
     // convenience getter for easy access to form fields
-    get f() { return this.loginForm.controls; }
+    get f() { 
+        console.log("value of controls", this.loginForm.controls)
+        return this.loginForm.controls; 
+    }
 
     onSubmit() {
         this.submitted = true;
