@@ -21,11 +21,17 @@ pipeline {
     }
      stage('Install dependencies') {
       steps {
-		bat 'npm init'
         bat 'npm install'
       }
     }
-    stage('Build') {
+    
+	stage('Change the directories') {
+      steps {
+		 dir("angular7tutorial") {
+		 sh "pwd"
+      }
+    }
+	stage('Build') {
       steps {
          bat 'npm run build'
       }
