@@ -21,12 +21,12 @@ pipeline {
     }
      stage('Install dependencies') {
       steps {
-        bat 'npm install'
+        bat 'npm install --save C:\Devops_Projects\angular\angular7tutorial'
       }
     }
     stage('Build') {
       steps {
-        bat 'ng serve --open'
+         bat 'npm run build'
       }
     }
      stage('Test') {
