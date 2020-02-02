@@ -36,7 +36,9 @@ pipeline {
 
      stage('Test') {
       steps {
+	    dir('angular7tutorial'){
         bat 'npm test'
+		}
       }
     }
   }
