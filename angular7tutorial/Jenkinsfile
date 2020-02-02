@@ -7,16 +7,16 @@ Marketplace
 Explore
  
 @asthagaur1 
-Devops-Cops
+angular
 /
-danfoss.devops.frontend
+angular7tutorial
 1
 10
  Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security Insights
-danfoss.devops.frontend/Jenkinsfile
-@Devops-Cops Devops-Cops Update Jenkinsfile
+angular7tutorial/Jenkinsfile
+@angular angular Update Jenkinsfile
 ca0b8ba on Jan 2
-@tameemansariCop@Devops-Cops
+@asthagaur1@angular
 38 lines (36 sloc)  793 Bytes
   
 pipeline {
@@ -28,6 +28,7 @@ pipeline {
     stage('Cloning Git') {
       steps {
         git 'https://github.com/asthagaur1/angular.git' 
+		cd angular7tutorial
       }
     }
     stage('Checkout') {
@@ -40,10 +41,6 @@ pipeline {
         userRemoteConfigs: [[url: 'https://github.com/asthagaur1/angular.git']]])   
         }
     }
-    stage('Install dependencies') {
-      steps {
-        bat 'cd angular7tutorial'
-      }
 	 
 	 stage('Install dependencies') {
       steps {
