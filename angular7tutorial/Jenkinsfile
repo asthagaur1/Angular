@@ -1,24 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@asthagaur1 
-angular
-/
-angular7tutorial
-1
-10
- Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security Insights
-angular7tutorial/Jenkinsfile
-@angular angular Update Jenkinsfile
-ca0b8ba on Jan 2
-@asthagaur1@angular
-38 lines (36 sloc)  793 Bytes
-  
 pipeline {
   agent any
  
@@ -27,8 +6,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/asthagaur1/angular.git' 
-		cd angular7tutorial
+        git 'https://github.com/asthagaur1/angular.git'
       }
     }
     stage('Checkout') {
@@ -41,8 +19,7 @@ pipeline {
         userRemoteConfigs: [[url: 'https://github.com/asthagaur1/angular.git']]])   
         }
     }
-	 
-	 stage('Install dependencies') {
+     stage('Install dependencies') {
       steps {
         bat 'npm install'
       }
@@ -54,20 +31,8 @@ pipeline {
     }
      stage('Test') {
       steps {
-        bat 'npm run test-headless'
+        bat 'npm test'
       }
     }
   }
 }
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
