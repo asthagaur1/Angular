@@ -26,11 +26,9 @@ pipeline {
     }
 	stage('check dic') {
       steps {
-		sh "$PWD"
           dir('angular7tutorial'){
-            sh "$PWD"
+            bat 'npm run build'
           }
-          sh "$PWD"
       }
     }
     stage('Build') {
