@@ -26,7 +26,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        bat 'ng serve --open'
+         bat 'npm run build'
       }
     }
      stage('Test') {
