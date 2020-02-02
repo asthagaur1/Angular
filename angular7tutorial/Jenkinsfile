@@ -21,7 +21,7 @@ pipeline {
     }
      stage('Install dependencies') {
       steps {
-		bat cd angular7tutorial
+		bat 'npm init'
         bat 'npm install'
       }
     }
