@@ -21,7 +21,8 @@ pipeline {
     }
      stage('Install dependencies') {
       steps {
-        bat 'npm install --save C:\Devops_Projects\angular\angular7tutorial'
+		bat cd angular7tutorial
+        bat 'npm install'
       }
     }
     stage('Build') {
