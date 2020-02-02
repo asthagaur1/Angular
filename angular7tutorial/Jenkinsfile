@@ -21,7 +21,9 @@ pipeline {
     }
      stage('Install dependencies') {
       steps {
+	    dir('angular7tutorial'){
         bat 'npm install'
+		}
       }
     }
 	stage('check dic') {
