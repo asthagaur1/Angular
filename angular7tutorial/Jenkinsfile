@@ -29,7 +29,7 @@ pipeline {
 	stage('check dic') {
       steps {
           dir('angular7tutorial'){
-            bat 'npm run build'
+          bat 'npm run build'
           }
       }
     }
@@ -37,7 +37,7 @@ pipeline {
      stage('Test') {
       steps {
 	    dir('angular7tutorial'){
-        bat 'npm test'
+        bat 'npm run test-headless'
 		}
       }
     }
