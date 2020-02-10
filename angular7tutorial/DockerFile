@@ -11,7 +11,7 @@
 
 FROM node:11.15.0-alpine as build-step
 WORKDIR /app
-COPY package.json .
+COPY ./package.json . 
 RUN npm install
 COPY . .
 EXPOSE 4200
