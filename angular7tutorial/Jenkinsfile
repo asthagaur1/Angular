@@ -46,5 +46,6 @@ pipeline {
           filename "C:/Program Files (x86)/Jenkins/workspace/angular_pipe_line_project/angular7tutorial/Dockerfile"
         }
       }
+    }
   }
 }
