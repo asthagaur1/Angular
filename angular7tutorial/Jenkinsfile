@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+  agent {
+        dockerfile {
+          filename "C:/Program Files (x86)/Jenkins/workspace/angular_pipe_line_project/angular7tutorial/Dockerfile"
+        }
+      }
  
   tools {nodejs "node"}
  
@@ -40,12 +44,6 @@ pipeline {
 		}
       }
     }
-    stage("Test front end") {
-      agent {
-        dockerfile {
-          filename "C:/Program Files (x86)/Jenkins/workspace/angular_pipe_line_project/angular7tutorial/Dockerfile"
-        }
-      }
-    }
+
   }
 }
